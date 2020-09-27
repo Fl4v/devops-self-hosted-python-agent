@@ -91,12 +91,16 @@ rm $AZP_TOKEN_FILE
 # Create directory for hosting Python 3.7.9 binaries
 mkdir -p /azp/agent/_work/_tool/Python/3.7.9/x64
 cd /azp/Python-3.7.9
+
+# Compile Python 3.7.9 binaries
 make altinstall
 touch /azp/agent/_work/_tool/Python/3.7.9/x64.complete
 
 # Create directory for hosting Python 3.8.5 binaries
 mkdir -p /azp/agent/_work/_tool/Python/3.8.5/x64
 cd /azp/Python-3.8.5
+
+# Compile Python 3.8.5 binaries
 make altinstall
 touch /azp/agent/_work/_tool/Python/3.8.5/x64.complete
 
