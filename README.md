@@ -50,4 +50,8 @@ docker push yourregistry.azurecr.io/agents/devops-agent:v1
 
 Before you can proceed with the registation of your agent, you'll need a one time Personal Access Token - PAT Token that will be used by the agent upon first setup. More info [here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops) and [here](https://docs.microsoft.com/en-us/azure/devops/organizations/accounts/use-personal-access-tokens-to-authenticate?view=azure-devops&tabs=preview-page). Head over to DevOps and create one as you'll need it for the next step.
 
+### Run Container
 
+```bash
+docker run -d --name devops-agent-01 --restart unless-stopped -e AZP_TOKEN={PAT_TOKEN} -e AZP_URL=https://dev.azure.com/{YourOrganisation} -e AZP_AGENT_NAME=agent-01 -e POOL={SelfHostedPool} devops-agent:v1 # Running in detached mode
+```
