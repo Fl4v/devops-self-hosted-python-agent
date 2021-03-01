@@ -33,11 +33,11 @@ RUN tar -xzf Python-3.7.9.tgz \
 RUN rm Python-3.7.9.tgz Python-3.8.5.tgz
 
 RUN cd /azp/Python-3.7.9 \
-&& ./configure --prefix=/azp/agent/_work/_tool/Python/3.7.9/x64/ --enable-optimizations --with-ensurepip=install \
+&& ./configure --prefix=/azp/agent/_work/_tool/Python/3.7.9/x64/ --with-ensurepip=install \
 && make -j 8
 
 RUN cd /azp/Python-3.8.5 \
-&& ./configure --prefix=/azp/agent/_work/_tool/Python/3.8.5/x64/ --enable-optimizations --with-ensurepip=install \
+&& ./configure --prefix=/azp/agent/_work/_tool/Python/3.8.5/x64/ --with-ensurepip=install \
 && make -j 8
 
 WORKDIR /azp
